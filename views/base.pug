@@ -1,0 +1,54 @@
+doctype html 
+html 
+    block head 
+        head 
+            title Natours | #{header}
+            meta(name='viewport' content='width=device-width, initial-scale=1.0')
+            meta( charset='UTF-8')
+            link(rel='stylesheet',href='/css/style.css')
+            link(rel='shortcut icon',type='images/png',href='/img/favicon.png')
+            link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
+            
+    body 
+        header.header 
+            nav.nav.nav--tours 
+                a(href='/').nav__el All Tours 
+            div.header__logo
+                img( src='/img/logo-white.png' alt='Natours logo' )
+            nav.nav.nav--user 
+                if user
+                    a.nav__el.nav__el--logout Logout
+                    a(href='#').nav__el
+                       img( src=`img/users/${user.photo}` alt=`photo of ${user.photo}`).nav__user-img
+                       span= user.name.split(' ')[0]
+                else  
+                     a(href="/login").nav__el Login
+                     a(href='#').nav__el.nav__el--cta Sign Up
+                
+
+
+               
+        block content
+        div.footer
+            div.footer__logo
+                img(src='/img/logo-green.png' alt='Natours logo')
+            ul.footer__nav 
+                li: a(href='#') About us
+                li: a(href='#') Download apps
+                li: a(href='#') Become a Guide 
+                li: a(href='#') Career
+                li: a(href='#') Contact
+            p.footer__copyright &copy; by Jonas Schmedtmann. All rights reserved
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js")
+        script(src='/js/login.js')
+        script(src='/js/mapbox.js')
+        
+
+
+
+//-   h1= tour.toUpperCase()
+//-   //use to create javascript docs signifies with a -
+//-   //-how to 
+//-   //-h1 Hassan Rulz
+//-   -const x = 10
+//-   h1= 2 *x 
