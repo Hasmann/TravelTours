@@ -1,2 +1,1 @@
-# TravelTours
-A Rest API Tourism Application more details in Read.me
+An Express.js Rest Api for a tourismapplication created using Node.js, Express.js, MongoDb, that allows users to book and pay for tours whilist visualisaing their tour routes using Mapbox integrated with Mongodb(MongoDb Points), and Admins can add and mangage tours. This Application was integrated with a security authentication and authorization API wholly created by me, and also an automated reviews system that allows users that book tours to leave reviews on their tours.
